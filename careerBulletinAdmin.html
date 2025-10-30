@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Bulletin Admin - Career Wallah</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #009e60;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #009e60;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    form input[type="file"] {
+      padding: 6px;
+    }
+
+    button {
+      background-color: #009e60;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #007a4d;
+    }
+
+    .article-item {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      background: #f3fff7;
+    }
+
+    .article-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .article-actions {
+      margin-top: 10px;
+    }
+
+    .article-actions button {
+      margin-right: 10px;
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    .article-actions button.edit-btn {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    .article-actions button.delete-btn {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f1f1f1;
+      color: #333;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📢 Career Bulletin Admin Panel</h1>
+  </header>
+<main class="admin-container">
+    <button id="login-btn">Login</button>
+<button id="logout-btn">Logout</button>
+<section id="admin-section" style="display:none;">
+  <form id="bulletin-form"> ... </form>
+  <div id="bulletin-list"></div>
+</section>
+
+  <div class="container">
+    <main class="admin-container">
+    <button onclick="location.href='admin.html'">← Back to Admin Panel</button>
+    <h2>Post a New Career Article</h2>
+    <form id="bulletin-form">
+      <input type="text" id="articleName" placeholder="Article Title" required />
+      <input type="date" id="publishDate" required />
+      <input type="text" id="authorName" placeholder="Author Name" required />
+      <input type="text" id="authorDetails" placeholder="Author Details" />
+      <input type="file" id="articleImage" accept="image/*" />
+      <textarea id="articleContent" rows="6" placeholder="Write your article content here..." required></textarea>
+      <button type="submit">📤 Publish Article</button>
+    </form>
+
+    <h2 style="margin-top: 40px;">📚 Published Articles</h2>
+    <div id="article-list"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 Career Wallah | Career Bulletin Admin</p>
+  </footer>
+
+  <script type="module" src="careerBulletinAdmin.js"></script>
+  
+
+</body>
+</html>

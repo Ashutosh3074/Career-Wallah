@@ -1,0 +1,70 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Wallah Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Career Wallah - Admin Panel</h1>
+  </header>
+
+  <main class="admin-container">
+    <button id="login-btn">Login with Google</button>
+    <button id="logout-btn" style="display:none">Logout</button>
+   
+
+
+    <div class="admin-section" id="admin-section" style="display:none;">
+      
+     
+
+      <h2>Post a New Job</h2>
+      
+      <form id="job-form">
+        <input type="text" id="jobTitle" placeholder="Job Title/Article Title" required />
+        <input type="text" id="organization" placeholder="Organization/Author Name" required />
+        <input type="text" id="location" placeholder="Location/short detain about artical" />
+        <select id="jobType">
+  <option value="government">Government</option>
+  <option value="fresher">Fresher Corporate</option>
+  <option value="experienced">Experienced Corporate</option>
+  <option value="internship">Intership</option>
+   <option value="career Bulletin">Career Bulletin</option>
+  
+
+</select>
+
+        <input type="text" id="salary" placeholder="Salary" />
+        <input type="number" id="vacancies" placeholder="Vacancies" />
+        <input type="text" id="eligibility" placeholder="Eligibility" />
+        <input type="text" id="ageLimit" placeholder="Age Limit" />
+        <input type="text" id="fee" placeholder="Application Fee" />
+        
+        <input type="text" id="experience" placeholder="Experience (e.g., 0-1 years)" />
+
+        <input type="text" id="Skill" placeholder="Skill" />
+        <input type="date" id="lastDate" placeholder="Last Date to Apply" />
+        <input type="text" id="passoutYear" placeholder="Year of Passout" />
+        <textarea id="jobDesc" placeholder="Job Description" required></textarea>
+        <input type="text" id="selection" placeholder="Selection Process" />
+        <input type="url" id="applyLink" placeholder="Apply Here Link/image link" required />
+        <input type="url" id="pdfLink" placeholder="Official Notification PDF Link" />
+        <button type="submit">Post Job</button>
+      </form>
+
+      <div id="statusMessage"></div>
+      <div id="job-list"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Career Wallah. Admin Panel.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
