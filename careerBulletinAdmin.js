@@ -44,23 +44,7 @@ async function loadBulletins() {
 }
 
 
-// ✅ Firebase Config
-const firebaseConfig = {
-  apiKey: "AIzaSyA_qJU-gllTt7SGjHkQe1x61Bb0IoKkMHw",
-  authDomain: "career-wallah-9dae6.firebaseapp.com",
-  projectId: "career-wallah-9dae6",
-  storageBucket: "career-wallah-9dae6.appspot.com",
-  messagingSenderId: "859534502117",
-  appId: "1:859534502117:web:fa6f9640a97a9aefd38c0c",
-  measurementId: "G-GCS9B6ZH0G"
-};
 
-// ✅ Init Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-const db = getFirestore(app);
-const ADMIN_EMAIL = "ashut0901@gmail.com";
 
 // ⏳ Wait for DOM to load before attaching events
 document.addEventListener("DOMContentLoaded", () => {
@@ -181,3 +165,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
+
